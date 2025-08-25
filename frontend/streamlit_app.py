@@ -6,7 +6,7 @@ from PIL import Image
 import io
 
 # Configuration
-BACKEND_URL = "http://localhost:5001/api"
+BACKEND_URL = "https://product-description-generator-71kn.onrender.com"
 
 def init_session_state():
     """Initialize session state variables"""
