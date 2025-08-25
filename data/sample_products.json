@@ -1,0 +1,87 @@
+
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Premium Wireless Bluetooth Headphones",
+      "price": 129.99,
+      "description": "High-quality over-ear wireless headphones with noise cancellation, 30-hour battery life, and premium sound quality.",
+      "category": "electronics",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+      "rating": {
+        "rate": 4.5,
+        "count": 320
+      },
+      "specifications": {
+        "brand": "AudioTech",
+        "color": "Black",
+        "connectivity": "Bluetooth 5.0",
+        "battery_life": "30 hours",
+        "weight": "280g"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Organic Cotton T-Shirt",
+      "price": 24.99,
+      "description": "Comfortable and sustainable organic cotton t-shirt, perfect for everyday wear. Available in multiple colors.",
+      "category": "clothing",
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500",
+      "rating": {
+        "rate": 4.2,
+        "count": 156
+      },
+      "specifications": {
+        "material": "100% Organic Cotton",
+        "sizes": ["XS", "S", "M", "L", "XL"],
+        "care": "Machine washable",
+        "origin": "Fair Trade Certified"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Stainless Steel Water Bottle",
+      "price": 34.99,
+      "description": "Double-walled stainless steel water bottle that keeps drinks cold for 24 hours or hot for 12 hours.",
+      "category": "lifestyle",
+      "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500",
+      "rating": {
+        "rate": 4.8,
+        "count": 892
+      },
+      "specifications": {
+        "capacity": "750ml",
+        "material": "18/8 Stainless Steel",
+        "insulation": "Double-walled vacuum",
+        "features": ["Leak-proof", "BPA-free", "Dishwasher safe"]
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "electronics",
+      "name": "Electronics",
+      "description": "Electronic devices and gadgets"
+    },
+    {
+      "id": "clothing",
+      "name": "Clothing",
+      "description": "Fashion and apparel items"
+    },
+    {
+      "id": "lifestyle",
+      "name": "Lifestyle",
+      "description": "Home and lifestyle products"
+    },
+    {
+      "id": "sports",
+      "name": "Sports & Outdoors",
+      "description": "Sports equipment and outdoor gear"
+    },
+    {
+      "id": "books",
+      "name": "Books",
+      "description": "Books and educational materials"
+    }
+  ]
+}
