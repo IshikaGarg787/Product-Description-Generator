@@ -9,4 +9,4 @@ class Config:
     DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
     
     # Demo store API (using a mock API for demo)
-    DEMO_STORE_API_URL = "https://fakestoreapi.com/products"
+    DEMO_STORE_API_URL = os.getenv('DEMO_STORE_API_URL', "https://fakestoreapi.com/products")
