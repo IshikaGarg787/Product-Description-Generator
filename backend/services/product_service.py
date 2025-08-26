@@ -6,33 +6,35 @@ logger = logging.getLogger(__name__)
 
 class ProductService:
     def __init__(self):
-        self.api_url = Config.DEMO_STORE_API_URL
-    
-    def fetch_products(self, limit=20):
-        """Fetch products from demo store API"""
+        self.api_url = Config.DEMO_STORE_API_URL  # Points to GitHub raw JSON
+
+    def fetch_products(self):
+        """Fetch products from GitHub JSON"""
         try:
-            response = requests.get(f"{self.api_url}?limit={limit}")
+            response = requests.get(self.api_url)
             response.raise_for_status()
-            return response.json()
+            data = response.json()
+            
+            # If JSON is a dictionary with a key 'products', use it
+            if isinstance(data, dict) and "products" in data:
+                return data["products"]
+            return data  # Otherwise, assume JSON is a list of products
         
         except requests.exceptions.RequestException as e:
             logger.error(f"Error fetching products: {str(e)}")
-            # Return sample data if API fails
             return self._get_sample_products()
-    
+
     def fetch_product_by_id(self, product_id):
-        """Fetch single product by ID"""
-        try:
-            response = requests.get(f"{self.api_url}/{product_id}")
-            response.raise_for_status()
-            return response.json()
-        
-        except requests.exceptions.RequestException as e:
-            logger.error(f"Error fetching product {product_id}: {str(e)}")
-            return None
-    
+        """Fetch single product by ID from the JSON"""
+        products = self.fetch_products()
+        for product in products:
+            if product.get("id") == product_id:
+                return product
+        logger.warning(f"Product with ID {product_id} not found")
+        return None
+
     def _get_sample_products(self):
-        """Return sample products if API is unavailable"""
+        """Return sample products if API fails"""
         return [
             {
                 "id": 1,
