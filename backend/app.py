@@ -21,6 +21,15 @@ def health_check():
     """Health check endpoint"""
     return jsonify({"status": "healthy", "service": "E-commerce Product Generator"})
 
+@app.route('/api/test-fakestore', methods=['GET'])
+def test_fakestore():
+    import requests
+    try:
+        resp = requests.get("https://fakestoreapi.com/products")
+        return {"status_code": resp.status_code, "data": resp.text}
+    except Exception as e:
+        return {"error": str(e)}
+
 @app.route('/api/products', methods=['GET'])
 def get_products():
     """Get products from demo store API"""
