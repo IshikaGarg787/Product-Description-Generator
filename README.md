@@ -36,14 +36,13 @@ ecommerce-product-generator/
 ├── .env.example
 └── README.md
 
-## 🛠️ Installation & Setup
-
-### Prerequisites
+## Prerequisites
 - Python 3.8 or higher
 - Google Gemini API key ([Get it here](https://makersuite.google.com/app/apikey))
 - Internet connection for product data fetching
 
-### Step 1: Clone the Repository
-```bash
-git clone <repository-url>
-cd ecommerce-product-generator
+## Deployed Links
+- Step1: Run backend first
+https://product-description-generator-71kn.onrender.com/api/products
+- Step2: Then run the frontend
+https://product-description-generator-1.onrender.com/
