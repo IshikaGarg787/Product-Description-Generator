@@ -1,93 +1,46 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
 # Virtual Environment
 venv/
 env/
-ENV/
-env.bak/
-venv.bak/
 
 # Environment Variables
 .env
-.env.local
-.env.*.local
 
-# IDE
+# Python Cache
+__pycache__/
+*.py[cod]
+
+# Build / Distribution
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+
+# IDE Settings
 .vscode/
 .idea/
-*.swp
-*.swo
-*~
+
+# OS Files
+.DS_Store
+Thumbs.db
 
 # Streamlit
 .streamlit/
 
-# Logs
-*.log
-logs/
-
-# Database
-*.db
-*.sqlite
-
-# OS
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# Temporary files
-tmp/
-temp/
-*.tmp
-
-# Jupyter Notebooks
-.ipynb_checkpoints
-
 # Flask
 instance/
-.webassets-cache
 
-# Coverage reports
-htmlcov/
-.coverage
-.coverage.*
-coverage.xml
-*.cover
-.hypothesis/
-.pytest_cache/
+# Temporary Files
+tmp/
+temp/
 
-# Node modules (if any)
-node_modules/
-
-# Images (if storing locally)
+# Uploaded / Generated Files
 uploads/
-images/
 
-# Cache
-.cache/
+# Testing
+.pytest_cache/
+.coverage
+
+# Node Modules (if added later)
+node_modules/
